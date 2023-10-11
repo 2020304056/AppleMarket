@@ -10,10 +10,12 @@ import java.text.DecimalFormat
 
 class MyAdapter(private val mItems: MutableList<MyItem>) : RecyclerView.Adapter<MyAdapter.Holder>() {
 
+    // 아이템 클릭
     interface ItemClick {
         fun onClick(view : View, position : Int)
     }
 
+    // 롱 클릭
     interface ItemLongClick {
         fun onLongClick(view : View, position : Int)
     }
@@ -21,9 +23,28 @@ class MyAdapter(private val mItems: MutableList<MyItem>) : RecyclerView.Adapter<
     var itemClick : ItemClick? = null
     var itemLongClick : ItemLongClick? = null
 
+    // 홀더 바인딩, Holder
+    inner class Holder(binding: ItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        val itemImageView = binding.iconItem
+        val tvItemTitle = binding.tvItemTitle
+        val tvAddress = binding.tvAddress
+        val tvPrice = binding.tvPrice
+        val tvItemChat = binding.tvChatCnt
+        val tvItemLike = binding.tvLikecnt
+        val ivAdapterLike = binding.ivLike
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val binding = ItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return Holder(binding)
+    }
+
+    override fun getItemCount(): Int {
+        return mItems.size
+    }
+
+    override fun getItemId(position: Int): Long {
+        return position.toLong()
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
@@ -31,7 +52,7 @@ class MyAdapter(private val mItems: MutableList<MyItem>) : RecyclerView.Adapter<
         holder.itemView.setOnClickListener {
             itemClick?.onClick(it, position)
         }
-
+        // LongClickListener
         holder.itemView.setOnLongClickListener() OnLongClickListener@{
             itemLongClick?.onLongClick(it, position)
             return@OnLongClickListener true
@@ -51,23 +72,5 @@ class MyAdapter(private val mItems: MutableList<MyItem>) : RecyclerView.Adapter<
             holder.ivAdapterLike.setImageResource(R.drawable.heart2)
         else
             holder.ivAdapterLike.setImageResource(R.drawable.heart)
-    }
-
-    override fun getItemId(position: Int): Long {
-        return position.toLong()
-    }
-
-    override fun getItemCount(): Int {
-        return mItems.size
-    }
-
-    inner class Holder(binding: ItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        val itemImageView = binding.iconItem
-        val tvItemTitle = binding.tvItemTitle
-        val tvAddress = binding.tvAddress
-        val tvPrice = binding.tvPrice
-        val tvItemChat = binding.tvChatCnt
-        val tvItemLike = binding.tvLikecnt
-        val ivAdapterLike = binding.ivLike
     }
 }

@@ -12,9 +12,8 @@ import com.android.applemarket.MyItem
 import java.text.DecimalFormat
 
 class DetailActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityDetailBinding
 
-    private var isLike = false
+    private lateinit var binding: ActivityDetailBinding
 
     private val item: MyItem? by lazy {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -28,12 +27,15 @@ class DetailActivity : AppCompatActivity() {
         intent.getIntExtra(Constants.ITEM_INDEX, 0)
     }
 
+    private var isLike = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Log.d("jblee", "itemPosition = $itemPosition")
+
 
         binding.ivItemImage.setImageDrawable(item?.let {
             ResourcesCompat.getDrawable(
