@@ -25,7 +25,7 @@ class MyAdapter(private val mItems: MutableList<MyItem>) : RecyclerView.Adapter<
 
     // 홀더 바인딩, Holder
     inner class Holder(binding: ItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        val itemImageView = binding.iconItem
+        val itemImageView = binding.ivImage
         val tvItemTitle = binding.tvItemTitle
         val tvAddress = binding.tvAddress
         val tvPrice = binding.tvPrice
