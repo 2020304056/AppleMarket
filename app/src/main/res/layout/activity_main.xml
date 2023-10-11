@@ -58,24 +58,23 @@
         android:id="@+id/fb_scrollup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:src="@drawable/uparrow"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="#FFFFFFFF"
-        android:elevation="0dp"
-        android:hapticFeedbackEnabled="true"
-        android:src="@drawable/uparrow"
-        app:borderWidth="0dp"
         android:visibility="invisible"
+        android:backgroundTint="#FFFFFFFF"
+        android:hapticFeedbackEnabled="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:elevation="0dp"
+        app:borderWidth="0dp"
         app:elevation="0dp"
         app:fabCustomSize="40dp"
         app:fabSize="normal"
         app:maxImageSize="40dp"
         app:tint="@null"
-        tools:ignore="ContentDescription"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
+        tools:ignore="ContentDescription">
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 </androidx.constraintlayout.widget.ConstraintLayout>

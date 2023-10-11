@@ -7,17 +7,6 @@
     android:id="@+id/constLayout"
     tools:context=".DetailActivity">
 
-    <ImageView
-        android:id="@+id/iv_back"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:src="@drawable/back"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:clickable="true"/>
-
     <ScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
@@ -125,6 +114,19 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/back"
+        android:backgroundTint="#FFFFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:clickable="true"
+        android:elevation="0dp"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/groundbar"

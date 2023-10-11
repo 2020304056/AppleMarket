@@ -1,11 +1,11 @@
 package com.android.applemarket
 
-import com.android.applemarket.MyItem
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.android.applemarket.databinding.ItemBinding
+import com.android.applemarket.MyItem
 import java.text.DecimalFormat
 
 class MyAdapter(private val mItems: MutableList<MyItem>) : RecyclerView.Adapter<MyAdapter.Holder>() {

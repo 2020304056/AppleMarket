@@ -1,6 +1,5 @@
 package com.android.applemarket
 
-import com.android.applemarket.MyItem
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -9,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import com.android.applemarket.databinding.ActivityDetailBinding
 import com.google.android.material.snackbar.Snackbar
+import com.android.applemarket.MyItem
 import java.text.DecimalFormat
 
 class DetailActivity : AppCompatActivity() {
