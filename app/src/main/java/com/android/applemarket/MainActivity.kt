@@ -45,8 +45,8 @@ class MainActivity : AppCompatActivity() {
 
 
         val adapter = MyAdapter(dataList)
-        binding.recyclerView.adapter = adapter
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        binding.recyclerview.adapter = adapter
+        binding.recyclerview.layoutManager = LinearLayoutManager(this)
 
         adapter.itemClick = object : MyAdapter.ItemClick {
             override fun onClick(view: View, position: Int) {
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        binding.ivNoti.setOnClickListener{
+        binding.ivNotification.setOnClickListener{
             notification()
         }
 
@@ -82,10 +82,10 @@ class MainActivity : AppCompatActivity() {
         val fadeOut = AlphaAnimation(1f, 0f).apply { duration = 500 }
         var isTop = true
 
-        binding.recyclerView.addOnScrollListener(object: RecyclerView.OnScrollListener() {
+        binding.recyclerview.addOnScrollListener(object: RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
-                if (!binding.recyclerView.canScrollVertically(-1) // Scroll up & top
+                if (!binding.recyclerview.canScrollVertically(-1) // Scroll up & top
                     && newState == RecyclerView.SCROLL_STATE_IDLE) {
                     binding.fbScrollup.startAnimation(fadeOut)
                     binding.fbScrollup.visibility = View.GONE
@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
         })
 
         binding.fbScrollup.setOnClickListener {
-            binding.recyclerView.smoothScrollToPosition(0)
+            binding.recyclerview.smoothScrollToPosition(0)
         }
 
         activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
