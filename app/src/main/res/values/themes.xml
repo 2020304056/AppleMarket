@@ -3,6 +3,12 @@
     <style name="Base.Theme.AppleMarket" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- ActionBar 숨김 -->
+        <item name="windowActionBar">false</item>
+        <!-- ActionBar 제목 숨김 -->
+        <item name="windowNoTitle">true</item>
+        <!-- 풀스크린 모드 활성화 -->
+        <item name="android:windowFullscreen">true</item>
     </style>
 
     <style name="Theme.AppleMarket" parent="Base.Theme.AppleMarket" />
