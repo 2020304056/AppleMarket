@@ -100,6 +100,7 @@ class MainActivity : AppCompatActivity() {
             binding.recyclerview.smoothScrollToPosition(0)
         }
 
+        // 플로팅 버튼은 나타나고 사라질때 fade 효과가 있습니다.
         val fadeIn = AlphaAnimation(0f, 1f).apply { duration = 500 }
         val fadeOut = AlphaAnimation(1f, 0f).apply { duration = 500 }
         var isTop = true
