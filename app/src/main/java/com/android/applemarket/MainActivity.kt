@@ -174,7 +174,6 @@ class MainActivity : AppCompatActivity() {
             // 버전 26 이하 일때
             builder = NotificationCompat.Builder(this)
         }
-
         builder.run {
             setSmallIcon(R.mipmap.ic_launcher)
             setWhen(System.currentTimeMillis())
