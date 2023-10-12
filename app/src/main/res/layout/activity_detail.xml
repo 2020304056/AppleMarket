@@ -8,7 +8,7 @@
     tools:context=".DetailActivity">
 
     <ScrollView
-        android:id="@+id/scrollview"
+        android:id="@+id/detail_scrollview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/groundbar"
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/iv_itemImage"
+                android:id="@+id/detail_itemImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
@@ -31,17 +31,17 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/iv_face"
+                android:id="@+id/detail_face"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/faceicon"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/iv_itemImage"
+                app:layout_constraintTop_toBottomOf="@+id/detail_itemImage"
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
-                android:id="@+id/tv_sellerName"
+                android:id="@+id/detail_sellerName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="난쉽"
@@ -50,11 +50,11 @@
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="#FF000000"
-                app:layout_constraintStart_toEndOf="@+id/iv_face"
-                app:layout_constraintTop_toBottomOf="@+id/iv_itemImage" />
+                app:layout_constraintStart_toEndOf="@+id/detail_face"
+                app:layout_constraintTop_toBottomOf="@+id/detail_itemImage" />
 
             <TextView
-                android:id="@+id/tv_sellerAddress"
+                android:id="@+id/detail_sellerAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="동래구 온천제2동"
@@ -62,8 +62,8 @@
                 android:textStyle="bold"
                 android:textSize="12dp"
                 android:layout_marginStart="8dp"
-                app:layout_constraintStart_toEndOf="@+id/iv_face"
-                app:layout_constraintTop_toBottomOf="@+id/tv_sellerName" />
+                app:layout_constraintStart_toEndOf="@+id/detail_face"
+                app:layout_constraintTop_toBottomOf="@+id/detail_sellerName" />
 
             <ImageView
                 android:layout_width="75dp"
@@ -71,7 +71,7 @@
                 android:src="@drawable/mannertemperature"
                 android:layout_marginTop="19dp"
                 android:layout_marginEnd="19dp"
-                app:layout_constraintTop_toBottomOf="@+id/iv_itemImage"
+                app:layout_constraintTop_toBottomOf="@+id/detail_itemImage"
                 app:layout_constraintEnd_toEndOf="parent" />
 
             <View
@@ -80,12 +80,12 @@
                 android:layout_height="1dp"
                 android:background="#E1DCDC"
                 android:layout_marginTop="21dp"
-                app:layout_constraintTop_toBottomOf="@+id/tv_sellerName"
+                app:layout_constraintTop_toBottomOf="@+id/detail_sellerName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
-                android:id="@+id/tv_iTemTitle"
+                android:id="@+id/detail_iTemTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="샤넬 탑핸들 가방"
@@ -100,7 +100,7 @@
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
-                android:id="@+id/tv_iTemDetail"
+                android:id="@+id/detail_iTemDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="샤넬 트랜디 CC 탑핸들 스몰 램스킨 블랙 금장 플 랩백 !\n색상 : 블랙\n사이즈 : 25.5cm * 17.5cm * 8cm\n구성 : 본품, 더스트\n급하게 돈이 필요해서 팝니다 ㅠ ㅠ"
@@ -109,14 +109,14 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/tv_iTemTitle"
+                app:layout_constraintTop_toBottomOf="@+id/detail_iTemTitle"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <ImageView
-        android:id="@+id/iv_back"
+        android:id="@+id/detail_back"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:src="@drawable/back"
@@ -137,7 +137,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
-            android:id="@+id/ll_detail_like"
+            android:id="@+id/detail_like"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -149,7 +149,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/iv_detailLike"
+                android:id="@+id/detail_detailLike"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:src="@drawable/heart" />
@@ -163,10 +163,10 @@
             android:layout_marginStart="16dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ll_detail_like" />
+            app:layout_constraintStart_toEndOf="@+id/detail_like" />
 
         <TextView
-            android:id="@+id/tv_iTemDetailPrice"
+            android:id="@+id/detail_iTemDetailPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"

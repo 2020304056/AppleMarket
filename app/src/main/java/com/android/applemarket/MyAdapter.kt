@@ -25,13 +25,13 @@ class MyAdapter(private val mItems: MutableList<MyItem>) : RecyclerView.Adapter<
 
     // 홀더 바인딩, Holder
     inner class Holder(binding: ItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        val itemImageView = binding.ivImage
-        val tvItemTitle = binding.tvItemTitle
-        val tvAddress = binding.tvAddress
-        val tvPrice = binding.tvPrice
-        val tvItemChat = binding.tvChatCnt
-        val tvItemLike = binding.tvLikecnt
-        val ivAdapterLike = binding.ivLike
+        val itemImageView = binding.itemImage
+        val tvItemTitle = binding.itemItemTitle
+        val tvAddress = binding.itemAddress
+        val tvPrice = binding.itemPrice
+        val tvItemChat = binding.itemChatCnt
+        val tvItemLike = binding.itemLikecnt
+        val ivAdapterLike = binding.itemLike
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {

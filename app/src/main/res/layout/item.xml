@@ -18,14 +18,14 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
-            android:id="@+id/iv_image"
+            android:id="@+id/item_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/sample1" />
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/tv_itemTitle"
+        android:id="@+id/item_itemTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toEndOf="@+id/item_cardview" />
 
     <TextView
-        android:id="@+id/tv_address"
+        android:id="@+id/item_address"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
@@ -50,12 +50,12 @@
         android:text="서울 서대문구 창천동"
         android:textColor="#4C4B4B"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_itemTitle"
+        app:layout_constraintTop_toBottomOf="@+id/item_itemTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/item_cardview" />
 
     <TextView
-        android:id="@+id/tv_price"
+        android:id="@+id/item_price"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
@@ -65,7 +65,7 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/tv_address"
+        app:layout_constraintTop_toBottomOf="@+id/item_address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/item_cardview" />
 
@@ -82,12 +82,12 @@
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:src="@drawable/chatting"
-            app:layout_constraintTop_toTopOf="@+id/tv_chatCnt"
-            app:layout_constraintEnd_toStartOf="@+id/tv_chatCnt"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_chatCnt"/>
+            app:layout_constraintTop_toTopOf="@+id/item_chatCnt"
+            app:layout_constraintEnd_toStartOf="@+id/item_chatCnt"
+            app:layout_constraintBottom_toBottomOf="@+id/item_chatCnt"/>
 
         <TextView
-            android:id="@+id/tv_chatCnt"
+            android:id="@+id/item_chatCnt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"
@@ -95,22 +95,22 @@
             android:text="25"
             android:textColor="#4C4B4B"
             android:textSize="16sp"
-            app:layout_constraintTop_toTopOf="@+id/tv_likecnt"
-            app:layout_constraintEnd_toStartOf="@+id/tv_likecnt"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_likecnt" />
+            app:layout_constraintTop_toTopOf="@+id/item_likecnt"
+            app:layout_constraintEnd_toStartOf="@+id/item_likecnt"
+            app:layout_constraintBottom_toBottomOf="@+id/item_likecnt" />
 
         <ImageView
-            android:id="@+id/iv_like"
+            android:id="@+id/item_like"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginStart="10dp"
             android:src="@drawable/heart"
-            app:layout_constraintTop_toTopOf="@+id/tv_chatCnt"
-            app:layout_constraintEnd_toStartOf="@+id/tv_chatCnt"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_chatCnt"/>
+            app:layout_constraintTop_toTopOf="@+id/item_chatCnt"
+            app:layout_constraintEnd_toStartOf="@+id/item_chatCnt"
+            app:layout_constraintBottom_toBottomOf="@+id/item_chatCnt"/>
 
         <TextView
-            android:id="@+id/tv_likecnt"
+            android:id="@+id/item_likecnt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"

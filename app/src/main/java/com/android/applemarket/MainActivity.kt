@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // RecyclerView
-        binding.ivNotification.setOnClickListener{
+        binding.mainNotification.setOnClickListener{
             notification()
         }
 
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 스크롤을 최상단으로 이동
-        binding.fbScrollup.setOnClickListener {
+        binding.mainScrollup.setOnClickListener {
             binding.recyclerview.smoothScrollToPosition(0)
         }
 
@@ -109,13 +109,13 @@ class MainActivity : AppCompatActivity() {
                 super.onScrollStateChanged(recyclerView, newState)
                 if (!binding.recyclerview.canScrollVertically(-1)
                     && newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    binding.fbScrollup.startAnimation(fadeOut)
-                    binding.fbScrollup.visibility = View.GONE
+                    binding.mainScrollup.startAnimation(fadeOut)
+                    binding.mainScrollup.visibility = View.GONE
                     isTop = true
                 } else {
                     if (isTop) {
-                        binding.fbScrollup.visibility = View.VISIBLE
-                        binding.fbScrollup.startAnimation(fadeIn)
+                        binding.mainScrollup.visibility = View.VISIBLE
+                        binding.mainScrollup.startAnimation(fadeIn)
                         isTop = false
                     }
                 }
