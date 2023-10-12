@@ -35,16 +35,9 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         binding.detailImage.setImageDrawable(item?.let {
-            ResourcesCompat.getDrawable(
-                resources,
-                it.Image,
-                null
-            )
+            ResourcesCompat.getDrawable(resources, it.Image, null)
         })
-
         binding.detailSolder.text = item?.Solder
         binding.detailAddress.text = item?.Address
         binding.detailId.text = item?.Id
