@@ -50,7 +50,7 @@ class DetailActivity : AppCompatActivity() {
             exit()
         }
 
-        binding.detailLike.setOnClickListener {
+        binding.detailLove.setOnClickListener {
             if(!Love){
                 binding.detailHeart.setImageResource(R.drawable.heart2)
                 Snackbar.make(binding.constLayout, "관심 목록에 추가되었습니다.", Snackbar.LENGTH_SHORT).show()
