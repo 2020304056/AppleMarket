@@ -67,11 +67,11 @@ class MainActivity : AppCompatActivity() {
                 val isLike = it.data?.getBooleanExtra("isLike",false) as Boolean
 
                 if(isLike) {
-                    itemList[itemIndex].isLike = true
-                    itemList[itemIndex].InterestCnt += 1
+                    itemList[itemIndex].heart = true
+                    itemList[itemIndex].Interest += 1
                 }else {
-                    itemList[itemIndex].isLike = false
-                    itemList[itemIndex].InterestCnt -= 1
+                    itemList[itemIndex].heart = false
+                    itemList[itemIndex].Interest -= 1
                 }
                 adapter.notifyItemChanged(itemIndex)
             }

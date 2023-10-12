@@ -25,13 +25,13 @@ class MyAdapter(private val mItems: MutableList<MyItem>) : RecyclerView.Adapter<
 
     // 홀더 바인딩, Holder
     inner class Holder(binding: ItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        val itemImageView = binding.itemImage
-        val tvItemTitle = binding.itemItemTitle
-        val tvAddress = binding.itemAddress
-        val tvPrice = binding.itemPrice
-        val tvItemChat = binding.itemChatCnt
-        val tvItemLike = binding.itemLikecnt
-        val ivAdapterLike = binding.itemLike
+        val Image = binding.itemImage
+        val Id = binding.itemId
+        val Address = binding.itemAddress
+        val Price = binding.itemPrice
+        val Chatting = binding.itemChatting
+        val HeartNum = binding.itemHeartnum
+        val Heart = binding.itemHeart
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -58,19 +58,19 @@ class MyAdapter(private val mItems: MutableList<MyItem>) : RecyclerView.Adapter<
             return@OnLongClickListener true
         }
 
-        holder.itemImageView.setImageResource(mItems[position].Image)
-        holder.tvItemTitle.text = mItems[position].ItemTitle
-        holder.tvAddress.text = mItems[position].Address
+        holder.Image.setImageResource(mItems[position].Image)
+        holder.Id.text = mItems[position].Id
+        holder.Address.text = mItems[position].Address
 
         val price = mItems[position].Price
-        holder.tvPrice.text = DecimalFormat("#,###").format(price)+"원"
+        holder.Price.text = DecimalFormat("#,###").format(price)+"원"
 
-        holder.tvItemChat.text = mItems[position].ChatCnt.toString()
-        holder.tvItemLike.text = mItems[position].InterestCnt.toString()
+        holder.Chatting.text = mItems[position].Chatting.toString()
+        holder.HeartNum.text = mItems[position].Interest.toString()
 
-        if(mItems[position].isLike)
-            holder.ivAdapterLike.setImageResource(R.drawable.heart2)
+        if(mItems[position].heart)
+            holder.Heart.setImageResource(R.drawable.heart2)
         else
-            holder.ivAdapterLike.setImageResource(R.drawable.heart)
+            holder.Heart.setImageResource(R.drawable.heart)
     }
 }

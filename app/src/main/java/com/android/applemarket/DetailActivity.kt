@@ -37,7 +37,7 @@ class DetailActivity : AppCompatActivity() {
 
 
 
-        binding.detailItemImage.setImageDrawable(item?.let {
+        binding.detailImage.setImageDrawable(item?.let {
             ResourcesCompat.getDrawable(
                 resources,
                 it.Image,
@@ -45,13 +45,13 @@ class DetailActivity : AppCompatActivity() {
             )
         })
 
-        binding.detailSellerName.text = item?.SellerName
-        binding.detailSellerAddress.text = item?.Address
-        binding.detailITemTitle.text = item?.ItemTitle
-        binding.detailITemDetail.text = item?.ItemDetail
-        binding.detailITemDetailPrice.text = DecimalFormat("#,###").format(item?.Price) + "원"
-        isLike = item?.isLike == true
-        binding.detailDetailLike.setImageResource(if (isLike) {R.drawable.heart2}else{R.drawable.heart})
+        binding.detailSolder.text = item?.Solder
+        binding.detailAddress.text = item?.Address
+        binding.detailId.text = item?.Id
+        binding.detailDescription.text = item?.Description
+        binding.detailPrice.text = DecimalFormat("#,###").format(item?.Price) + "원"
+        isLike = item?.heart == true
+        binding.detailHeart.setImageResource(if (isLike) {R.drawable.heart2}else{R.drawable.heart})
 
         binding.detailBack.setOnClickListener {
             exit()
@@ -59,11 +59,11 @@ class DetailActivity : AppCompatActivity() {
 
         binding.detailLike.setOnClickListener {
             if(!isLike){
-                binding.detailDetailLike.setImageResource(R.drawable.heart2)
+                binding.detailHeart.setImageResource(R.drawable.heart2)
                 Snackbar.make(binding.constLayout, "관심 목록에 추가되었습니다.", Snackbar.LENGTH_SHORT).show()
                 isLike = true
             }else {
-                binding.detailDetailLike.setImageResource(R.drawable.heart)
+                binding.detailHeart.setImageResource(R.drawable.heart)
                 isLike = false
             }
         }

@@ -25,7 +25,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/item_itemTitle"
+        android:id="@+id/item_Id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -50,7 +50,7 @@
         android:text="서울 서대문구 창천동"
         android:textColor="#4C4B4B"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/item_itemTitle"
+        app:layout_constraintTop_toBottomOf="@+id/item_Id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/item_cardview" />
 
@@ -82,12 +82,12 @@
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:src="@drawable/chatting"
-            app:layout_constraintTop_toTopOf="@+id/item_chatCnt"
-            app:layout_constraintEnd_toStartOf="@+id/item_chatCnt"
-            app:layout_constraintBottom_toBottomOf="@+id/item_chatCnt"/>
+            app:layout_constraintTop_toTopOf="@+id/item_chatting"
+            app:layout_constraintEnd_toStartOf="@+id/item_chatting"
+            app:layout_constraintBottom_toBottomOf="@+id/item_chatting"/>
 
         <TextView
-            android:id="@+id/item_chatCnt"
+            android:id="@+id/item_chatting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"
@@ -95,22 +95,22 @@
             android:text="25"
             android:textColor="#4C4B4B"
             android:textSize="16sp"
-            app:layout_constraintTop_toTopOf="@+id/item_likecnt"
-            app:layout_constraintEnd_toStartOf="@+id/item_likecnt"
-            app:layout_constraintBottom_toBottomOf="@+id/item_likecnt" />
+            app:layout_constraintTop_toTopOf="@+id/item_heartnum"
+            app:layout_constraintEnd_toStartOf="@+id/item_heartnum"
+            app:layout_constraintBottom_toBottomOf="@+id/item_heartnum" />
 
         <ImageView
-            android:id="@+id/item_like"
+            android:id="@+id/item_heart"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginStart="10dp"
             android:src="@drawable/heart"
-            app:layout_constraintTop_toTopOf="@+id/item_chatCnt"
-            app:layout_constraintEnd_toStartOf="@+id/item_chatCnt"
-            app:layout_constraintBottom_toBottomOf="@+id/item_chatCnt"/>
+            app:layout_constraintTop_toTopOf="@+id/item_chatting"
+            app:layout_constraintEnd_toStartOf="@+id/item_chatting"
+            app:layout_constraintBottom_toBottomOf="@+id/item_chatting"/>
 
         <TextView
-            android:id="@+id/item_likecnt"
+            android:id="@+id/item_heartnum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"
