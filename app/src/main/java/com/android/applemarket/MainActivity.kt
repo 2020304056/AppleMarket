@@ -141,7 +141,6 @@ class MainActivity : AppCompatActivity() {
     // 알람
     fun notification(){
         val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
-
         val builder: NotificationCompat.Builder
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             // 버전 26 이상일때
