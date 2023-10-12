@@ -62,6 +62,7 @@ class DetailActivity : AppCompatActivity() {
         }
     }
 
+    // DetailActivity에서 MainActivity로 이동
     fun exit() {
         val intent = Intent(this, MainActivity::class.java).apply {
             putExtra("itemIndex", itemPosition)
