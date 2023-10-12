@@ -138,7 +138,6 @@ class MainActivity : AppCompatActivity() {
         }
         ad.show()
     }
-
     // 알람
     fun notification(){
         val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
