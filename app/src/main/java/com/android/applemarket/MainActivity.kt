@@ -64,9 +64,9 @@ class MainActivity : AppCompatActivity() {
         activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == RESULT_OK) {
                 val itemIndex = it.data?.getIntExtra("itemIndex",0) as Int
-                val isLike = it.data?.getBooleanExtra("isLike",false) as Boolean
+                val Love = it.data?.getBooleanExtra("Love",false) as Boolean
 
-                if(isLike) {
+                if(Love) {
                     itemList[itemIndex].heart = true
                     itemList[itemIndex].Interest += 1
                 }else {

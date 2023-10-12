@@ -27,7 +27,7 @@ class DetailActivity : AppCompatActivity() {
         intent.getIntExtra(Constants.ITEM_INDEX, 0)
     }
 
-    private var isLike = false
+    private var Love = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -43,21 +43,21 @@ class DetailActivity : AppCompatActivity() {
         binding.detailId.text = item?.Id
         binding.detailDescription.text = item?.Description
         binding.detailPrice.text = DecimalFormat("#,###").format(item?.Price) + "원"
-        isLike = item?.heart == true
-        binding.detailHeart.setImageResource(if (isLike) {R.drawable.heart2}else{R.drawable.heart})
+        Love = item?.heart == true
+        binding.detailHeart.setImageResource(if (Love) {R.drawable.heart2}else{R.drawable.heart})
 
         binding.detailBack.setOnClickListener {
             exit()
         }
 
         binding.detailLike.setOnClickListener {
-            if(!isLike){
+            if(!Love){
                 binding.detailHeart.setImageResource(R.drawable.heart2)
                 Snackbar.make(binding.constLayout, "관심 목록에 추가되었습니다.", Snackbar.LENGTH_SHORT).show()
-                isLike = true
+                Love = true
             }else {
                 binding.detailHeart.setImageResource(R.drawable.heart)
-                isLike = false
+                Love = false
             }
         }
     }
@@ -65,7 +65,7 @@ class DetailActivity : AppCompatActivity() {
     fun exit() {
         val intent = Intent(this, MainActivity::class.java).apply {
             putExtra("itemIndex", itemPosition)
-            putExtra("isLike", isLike)
+            putExtra("Love", Love)
         }
         setResult(RESULT_OK, intent)
         if (!isFinishing) finish()
